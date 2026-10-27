@@ -94,7 +94,7 @@ public class ModBlocks {
 
     private static Item registerBlockItem(String name, Block block) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, ModLosas.id(name));
-        Item.Properties itemProperties = new Item.Properties().setId(itemKey);
+        Item.Properties itemProperties = new Item.Properties().setId(itemKey).useBlockDescriptionPrefix();
         return Registry.register(BuiltInRegistries.ITEM, itemKey, new BlockItem(block, itemProperties));
     }
 
